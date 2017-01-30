@@ -1,0 +1,44 @@
+# Barcode
+	Size:
+		Empty.
+		Not Empty.
+	Is numeric:
+		Only contains numbers.
+		Contains other characters.
+	Value:
+		<=99
+		>99 and <9999.
+		>=9999.
+
+# itemName
+	Length:
+		Empty.
+		Not empty.
+	Content:
+		Special characters.
+		No special characters.
+	
+# itemType_s
+	Identifiable by type:
+		Identifiable.
+		Not identifiable.
+		
+# qty
+	Size:
+		Empty.
+		Not empty.
+	Is numeric:
+		Only cotnains numbers.
+		Contains other characters.
+	Value:
+		<0.
+		0 to 100.
+		>100.
+	
+# supplier
+	Length:
+		Empty.
+		Not empty.
+	Content:
+		Special characters.
+		No special characters.
