@@ -1,0 +1,44 @@
+# Barcode
+	Size:
+		Empty.						[single][property emptyBarcode]
+		Not Empty.
+	Is numeric:
+		Contains other characters.	[single][if !emptyBarcode] [property notNumeric]
+		Only contains numbers.		[if !emptyBarcode]
+	Value:
+		<=99						[single][if !emptyBarcode && !notNumeric]
+		>99 and <9999.				[if !emptyBarcode && !notNumeric]
+		>=9999.						[single][if !emptyBarcode && !notNumeric]
+
+# itemName
+	Length:
+		Empty.						[single][property emptyName]
+		Not empty.
+	Content:
+		Special characters.			[single][if !emptyName]
+		No special characters.		[if !emptyName]
+
+# itemType_s
+	Identifiable by type:
+		Identifiable.
+		Not identifiable.			[single][error]
+
+# qty
+	Size:
+		Empty.						[single][property emptyQuantity]
+		Not empty.
+	Is numeric:
+		Contains other characters.	[single][if !emptyQuantity] [property qtyNotNumeric]
+		Only contains numbers.		[if !emptyQuantity]
+	Value:
+		<0.							[single][if !emptyQuantity && !qtyNotNumeric]
+		0 to 100.					[if !emptyQuantity && !qtyNotNumeric]
+		>100.						[single][if !emptyQuantity && !qtyNotNumeric]
+
+# supplier
+	Length:
+		Empty.						[single][property emptySupplier]
+		Not empty.
+	Content:
+		Special characters.			[single][if !emptySupplier]
+		No special characters.		[if !emptySupplier]
